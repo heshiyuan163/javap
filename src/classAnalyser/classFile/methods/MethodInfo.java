@@ -88,11 +88,11 @@ public class MethodInfo {
 	 * 本规范所定义的method_info结构中，属性表可出现的成员有：
 	 * 				Code（§4.7.3），//TODO
 	 * 				Exceptions（§4.7.5），
-	 * 				Synthetic（§4.7.8），
-	 * 				Signature（§4.7.9），
-	 * 				Deprecated（§4.7.15），
-	 * 				untimeVisibleAnnotations（§4.7.16），
-	 * 				RuntimeInvisibleAnnotations（§4.7.17），
+	 * 				Synthetic（§4.7.8），==>SyntheticAttribute
+	 * 				Signature（§4.7.9），==>SignatureAttribute
+	 * 				Deprecated（§4.7.15），==>DeprecatedAttribute
+	 * 				RuntimeVisibleAnnotations（§4.7.16），==>RuntimeVisibleAnnotationsAttribute
+	 * 				RuntimeInvisibleAnnotations（§4.7.17），==>RuntimeInvisibleAnnotationsAttribute
 	 * 				RuntimeVisibleParameterAnnotations（§4.7.18），
 	 * 				RuntimeInvisibleParameterAnnotations（§4.7.19），
 	 * 				AnnotationDefault（§4.7.20）结构。

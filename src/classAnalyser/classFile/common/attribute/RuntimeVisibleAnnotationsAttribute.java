@@ -1,17 +1,21 @@
 package classAnalyser.classFile.common.attribute;
 
 /*
- * RuntimeVisibleAnnotations属性是可变长属性，位于ClassFile（§4.1）， field_info（§4.5）或method_info（§4.6）结构的
- * 属性表中。RuntimeVisibleAnnotations用于保存Java语言中的类、字段或方法的运行时的可见注解（Annotations）。
- * 每个ClassFile，field_info和method_info结构最多只能含有一个RuntimeVisibleAnnotations属性为当前的
- * 程序元素保存所有的运行时可见的Java语言注解。Java虚拟机必须支持这些注解可被反射的API使用它们。
+ * RuntimeVisibleAnnotations属性是可变长属性，位于	ClassFile（§4.1）， 
+ * 											field_info（§4.5）或
+ * 											method_info（§4.6）结构的属性表中。
+ * RuntimeVisibleAnnotations用于保存Java语言中的类、字段或方法的运行时的可见注解（Annotations）。
+ * 每个ClassFile，field_info和method_info结构最多只能含有一个RuntimeVisibleAnnotations属性为当前的程序元素保存所有的运行时可见的Java语言注解。
+ * Java虚拟机必须支持这些注解可被反射的API使用它们。
  * 
-RuntimeVisibleAnnotations属性格式如下： 
-	RuntimeVisibleAnnotations_attribute { u2 attribute_name_index; 
-										  u4 attribute_length; 
-										  u2 num_annotations; 
-										  annotation annotations[num_annotations]; 
-										}
+	The RuntimeVisibleAnnotations attribute has the following format:
+
+		RuntimeVisibleAnnotations_attribute {
+		    u2         attribute_name_index;
+		    u4         attribute_length;
+		    u2         num_annotations;
+		    annotation annotations[num_annotations];
+		}
  */
 public class RuntimeVisibleAnnotationsAttribute extends AttributeInfo{
 	

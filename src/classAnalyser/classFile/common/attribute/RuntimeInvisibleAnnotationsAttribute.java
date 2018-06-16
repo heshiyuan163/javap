@@ -1,26 +1,19 @@
 package classAnalyser.classFile.common.attribute;
 
-/*运行时非可见注解：
-The RuntimeInvisibleAnnotations attribute is similar to the RuntimeVisibleAnnotations attribute, except that 
-the annotations represented by a RuntimeInvisibleAnnotations attribute must not be made available for return 
-by reflective APIs, unless the Java Virtual Machine has been instructed to retain these annotations via some 
-implementation-specific mechanism such as a command line flag. In the absence of such instructions, the Java 
-Virtual Machine ignores this attribute.
-
-The RuntimeInvisibleAnnotations attribute is a variable-length attribute in the attributes table of a ClassFile, field_info, 
-or method_info structure (§4.1, §4.5, §4.6). The RuntimeInvisibleAnnotations attribute records run-time-invisible Java programming language annotations 
-on the corresponding class, method, or field.
-
-Each ClassFile, field_info, and method_info structure may contain at most one RuntimeInvisibleAnnotations attribute, which 
-records all the run-time-invisible Java programming language annotations on the corresponding program element. 
+/* 
+ * RuntimeInvisibleAnnotations属性和RuntimeVisibleAnnotations属性相似，
+ * 不同的是RuntimeInvisibleAnnotations表示的注解不能被反射API访问，
+ * 除非Java虚拟机通过特殊的实现相关的方式（譬如特定的命令行参数）收到才会（为反射的API）使用这些注解。
+ * 否则，Java虚拟机将忽略RuntimeInvisibleAnnotations属性。
+ * 
     The RuntimeInvisibleAnnotations attribute has the following format:
 
-	RuntimeInvisibleAnnotations_attribute {
-	    u2         attribute_name_index;
-	    u4         attribute_length;
-	    u2         num_annotations;
-	    annotation annotations[num_annotations];
-	}
+		RuntimeInvisibleAnnotations_attribute {
+		    u2         attribute_name_index;
+		    u4         attribute_length;
+		    u2         num_annotations;
+		    annotation annotations[num_annotations];
+		}
  */
 public class RuntimeInvisibleAnnotationsAttribute extends AttributeInfo{
 	
