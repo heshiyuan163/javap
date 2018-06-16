@@ -71,10 +71,12 @@ public class FieldInfo {
 	 * 		Signature（§4.7.9）, 		==>SignatureAttribute
 	 * 		Deprecated（§4.7.15）, 	==>DeprecatedAttribute
 	 * 		RuntimeVisibleAnnotations（§4.7.16）==>RuntimeVisibleAnnotationsAttribute 和
-	 * 		RuntimeInvisibleAnnotations（§4.7.17）。 
+	 * 		RuntimeInvisibleAnnotations（§4.7.17）==>RuntimeInvisibleAnnotationsAttribute
+	 * 
 	 * Java虚拟机实现必须正确的识别和读取field_info结构的attributes表中的ConstantValue（§4.7.2）属性。
-	 * 如果Java虚拟机实现支持版本号为49.0或更高的Class文件，那么它必须正确的识别和读取这些Class文件中的Signature（§4.7.9）, 
-	 * RuntimeVisibleAnnotations（§4.7.16） 和RuntimeInvisibleAnnotations（§4.7.17）结构。 
+	 * 如果Java虚拟机实现支持版本号为49.0或更高的Class文件，那么它必须正确的识别和读取这些Class文件中的Signature（§4.7.9）、
+	 * 																		  RuntimeVisibleAnnotations（§4.7.16） 、
+	 * 																		  RuntimeInvisibleAnnotations（§4.7.17）结构。 
 	 * 所有Java虚拟机实现都必须默认忽略field_info结构中attributes表所不可识别的成员。
 	 * 本规范中没有定义的属性不可影响Class文件的语义，它们只能提供附加描述信息（§4.7.1）。
 	 */
