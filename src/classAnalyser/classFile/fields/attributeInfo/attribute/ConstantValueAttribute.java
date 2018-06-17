@@ -1,4 +1,4 @@
-package classAnalyser.classFile.fields.attributeInfo;
+package classAnalyser.classFile.fields.attributeInfo.attribute;
 
 import classAnalyser.classFile.common.attribute.AttributeInfo;
 

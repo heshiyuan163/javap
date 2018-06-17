@@ -86,7 +86,7 @@ public class MethodInfo {
 	/*
 	 * attributes表的每一个成员的值必须是attribute（§4.7）结构，一个方法可以有任意个与之相关的属性。
 	 * 本规范所定义的method_info结构中，属性表可出现的成员有：
-	 * 				Code（§4.7.3），//TODO
+	 * 				Code（§4.7.3），==>CodeAttribute
 	 * 				Exceptions（§4.7.5），
 	 * 				Synthetic（§4.7.8），==>SyntheticAttribute
 	 * 				Signature（§4.7.9），==>SignatureAttribute
