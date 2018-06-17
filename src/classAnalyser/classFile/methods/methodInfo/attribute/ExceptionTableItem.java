@@ -6,7 +6,7 @@ package classAnalyser.classFile.methods.methodInfo.attribute;
         u2 catch_type;
     }
  */
-public class ExceptionTableRow {
+public class ExceptionTableItem {
 	
 	private byte b1;//high byte of start_pc
 	private byte b2;//low byte of start_pc

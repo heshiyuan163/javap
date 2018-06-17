@@ -88,7 +88,7 @@ public class CodeAttribute extends AttributeInfo{
 	 * exception_table[]数组的每个成员表示code[]数组中的一个异常处理器（Exception Handler）。
 	 * exception_table[]数组中，异常处理器顺序是有意义的（不能随意更改），详细内容见2.10节。
 	 */
-	private ExceptionTableRow[] exception_table;//length=exception_table_length
+	private ExceptionTableItem[] exception_table;//length=exception_table_length
 	
 	/*
 	 *  u2 attributes_count;
@@ -104,9 +104,9 @@ public class CodeAttribute extends AttributeInfo{
 	/*
 	 * 属性表的每个成员的值必须是attribute结构（§4.7）。
 	 * 一个Code属性可以有任意数量的可选属性与之关联。
-	 * 本规范中定义的、可以出现在Code属性的属性表中的成员只能是	LineNumberTable（§4.7.12），//TODO
-	 * 											LocalVariableTable（§4.7.13），
-	 * 											LocalVariableTypeTable（§4.7.14）和
+	 * 本规范中定义的、可以出现在Code属性的属性表中的成员只能是	LineNumberTable（§4.7.12），==>LineNumberTableAttribute
+	 * 											LocalVariableTable（§4.7.13），==>LocalVariableTableAttribute
+	 * 											LocalVariableTypeTable（§4.7.14）和//TODO TODO
 	 * 											StackMapTable（§4.7.4）属性。 
 	 * 如果一个Java虚拟机实现支持的Class文件版本号为50.0或更高，那么它必须正确的识别和读取Code属性的属性表出现的StackMapTable（§4.7.4）属性。 
 	 * Java虚拟机实现必须自动忽略Code属性的属性表数组中出现的所有它不能识别属性。
