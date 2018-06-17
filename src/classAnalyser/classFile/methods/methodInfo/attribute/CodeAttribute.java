@@ -107,7 +107,7 @@ public class CodeAttribute extends AttributeInfo{
 	 * 本规范中定义的、可以出现在Code属性的属性表中的成员只能是	LineNumberTable（§4.7.12），==>LineNumberTableAttribute
 	 * 											LocalVariableTable（§4.7.13），==>LocalVariableTableAttribute
 	 * 											LocalVariableTypeTable（§4.7.14）和==>LocalVariableTypeTableAttribute
-	 * 											StackMapTable（§4.7.4）属性。 //TODO TODO
+	 * 											StackMapTable（§4.7.4）属性。 ==>StackMapTableAttribute
 	 * 如果一个Java虚拟机实现支持的Class文件版本号为50.0或更高，那么它必须正确的识别和读取Code属性的属性表出现的StackMapTable（§4.7.4）属性。 
 	 * Java虚拟机实现必须自动忽略Code属性的属性表数组中出现的所有它不能识别属性。
 	 * 本规范中没有定义的属性不可影响Class文件的语义，只能提供附加描述信息（§4.7.1）。
