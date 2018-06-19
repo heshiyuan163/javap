@@ -47,7 +47,7 @@ public class ClassFile {
 	private Fields fields;
 	private Methods methods;
 	/**
-	 *   u2 attributes_count; 
+	 *   u2 attributes_count; //TODO TODO 
 	 *   attribute_info attributes[attributes_count];
 	 */
 

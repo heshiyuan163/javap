@@ -94,8 +94,9 @@ public class MethodInfo {
 	 * 				RuntimeVisibleAnnotations（§4.7.16），==>RuntimeVisibleAnnotationsAttribute
 	 * 				RuntimeInvisibleAnnotations（§4.7.17），==>RuntimeInvisibleAnnotationsAttribute
 	 * 				RuntimeVisibleParameterAnnotations（§4.7.18），==>RuntimeVisibleParameterAnnotationsAttribute
-	 * 				RuntimeInvisibleParameterAnnotations（§4.7.19），
-	 * 				AnnotationDefault（§4.7.20）结构。
+	 * 				RuntimeInvisibleParameterAnnotations（§4.7.19），==>RuntimeInvisibleParameterAnnotationsAttribute
+	 * 				AnnotationDefault（§4.7.20）==>AnnotationDefaultAttribute
+	 * 	结构。
 	 * 
 	 * Java虚拟机实现必须正确识别和读取method_info结构中的属性表的Code（§4.7.3）和Exceptions（§4.7.5）属性。
 	 * 如果Java虚拟机实现支持版本为49.0或更高的Class文件，那么它必须正确识别和读取这些Class文件的Signature（§4.7.9），
