@@ -1,4 +1,4 @@
-package classAnalyser.classFile.methods.methodInfo.attribute;
+package classAnalyser.classFile.methods.methodInfo.attribute.codeAttribute;
 /*
  * {    u2 start_pc;
         u2 end_pc;
