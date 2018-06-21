@@ -1,0 +1,183 @@
+Classfile /E:/171208/javaproj_1.7/src/Demo.class
+  Last modified 2018-6-17; size 1069 bytes
+  MD5 checksum 7d63694c3e20a6835de82c0bb375dc0a
+  Compiled from "Demo.java"
+public class Demo
+  minor version: 0
+  major version: 52
+  flags: ACC_PUBLIC, ACC_SUPER
+Constant pool:
+   #1 = Methodref          #12.#37        // java/lang/Object."<init>":()V
+   #2 = Fieldref           #38.#39        // java/lang/System.out:Ljava/io/PrintStream;
+   #3 = String             #40            // xxxxxxxxxxx
+   #4 = Methodref          #41.#42        // java/io/PrintStream.println:(Ljava/lang/String;)V
+   #5 = Class              #43            // java/lang/NullPointerException
+   #6 = Methodref          #5.#44         // java/lang/NullPointerException.printStackTrace:()V
+   #7 = Class              #45            // java/lang/ArithmeticException
+   #8 = Methodref          #7.#44         // java/lang/ArithmeticException.printStackTrace:()V
+   #9 = Class              #46            // java/lang/Exception
+  #10 = Methodref          #9.#44         // java/lang/Exception.printStackTrace:()V
+  #11 = Class              #47            // Demo
+  #12 = Class              #48            // java/lang/Object
+  #13 = Utf8               <init>
+  #14 = Utf8               ()V
+  #15 = Utf8               Code
+  #16 = Utf8               LineNumberTable
+  #17 = Utf8               LocalVariableTable
+  #18 = Utf8               this
+  #19 = Utf8               LDemo;
+  #20 = Utf8               div
+  #21 = Utf8               (II)I
+  #22 = Utf8               result
+  #23 = Utf8               I
+  #24 = Utf8               e
+  #25 = Utf8               Ljava/lang/NullPointerException;
+  #26 = Utf8               Ljava/lang/ArithmeticException;
+  #27 = Utf8               Ljava/lang/Exception;
+  #28 = Utf8               a
+  #29 = Utf8               b
+  #30 = Utf8               StackMapTable
+  #31 = Class              #43            // java/lang/NullPointerException
+  #32 = Class              #45            // java/lang/ArithmeticException
+  #33 = Class              #46            // java/lang/Exception
+  #34 = Class              #49            // java/lang/Throwable
+  #35 = Utf8               SourceFile
+  #36 = Utf8               Demo.java
+  #37 = NameAndType        #13:#14        // "<init>":()V
+  #38 = Class              #50            // java/lang/System
+  #39 = NameAndType        #51:#52        // out:Ljava/io/PrintStream;
+  #40 = Utf8               xxxxxxxxxxx
+  #41 = Class              #53            // java/io/PrintStream
+  #42 = NameAndType        #54:#55        // println:(Ljava/lang/String;)V
+  #43 = Utf8               java/lang/NullPointerException
+  #44 = NameAndType        #56:#14        // printStackTrace:()V
+  #45 = Utf8               java/lang/ArithmeticException
+  #46 = Utf8               java/lang/Exception
+  #47 = Utf8               Demo
+  #48 = Utf8               java/lang/Object
+  #49 = Utf8               java/lang/Throwable
+  #50 = Utf8               java/lang/System
+  #51 = Utf8               out
+  #52 = Utf8               Ljava/io/PrintStream;
+  #53 = Utf8               java/io/PrintStream
+  #54 = Utf8               println
+  #55 = Utf8               (Ljava/lang/String;)V
+  #56 = Utf8               printStackTrace
+{
+  public Demo();
+    descriptor: ()V
+    flags: ACC_PUBLIC
+    Code:
+      stack=1, locals=1, args_size=1
+         0: aload_0
+         1: invokespecial #1                  // Method java/lang/Object."<init>":()V
+         4: return
+      LineNumberTable:
+        line 2: 0
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0       5     0  this   LDemo;
+
+  public int div(int, int);
+    descriptor: (II)I
+    flags: ACC_PUBLIC
+    Code:
+      stack=2, locals=6, args_size=3
+         0: iload_1
+         1: iload_2
+         2: idiv
+         3: istore_3
+         4: iload_3
+         5: istore        4
+         7: getstatic     #2                  // Field java/lang/System.out:Ljava/io/PrintStream;
+        10: ldc           #3                  // String xxxxxxxxxxx
+        12: invokevirtual #4                  // Method java/io/PrintStream.println:(Ljava/lang/String;)V
+        15: iload         4
+        17: ireturn
+        18: astore_3
+        19: aload_3
+        20: invokevirtual #6                  // Method java/lang/NullPointerException.printStackTrace:()V
+        23: iconst_0
+        24: istore        4
+        26: getstatic     #2                  // Field java/lang/System.out:Ljava/io/PrintStream;
+        29: ldc           #3                  // String xxxxxxxxxxx
+        31: invokevirtual #4                  // Method java/io/PrintStream.println:(Ljava/lang/String;)V
+        34: iload         4
+        36: ireturn
+        37: astore_3
+        38: aload_3
+        39: invokevirtual #8                  // Method java/lang/ArithmeticException.printStackTrace:()V
+        42: iconst_0
+        43: istore        4
+        45: getstatic     #2                  // Field java/lang/System.out:Ljava/io/PrintStream;
+        48: ldc           #3                  // String xxxxxxxxxxx
+        50: invokevirtual #4                  // Method java/io/PrintStream.println:(Ljava/lang/String;)V
+        53: iload         4
+        55: ireturn
+        56: astore_3
+        57: aload_3
+        58: invokevirtual #10                 // Method java/lang/Exception.printStackTrace:()V
+        61: iconst_0
+        62: istore        4
+        64: getstatic     #2                  // Field java/lang/System.out:Ljava/io/PrintStream;
+        67: ldc           #3                  // String xxxxxxxxxxx
+        69: invokevirtual #4                  // Method java/io/PrintStream.println:(Ljava/lang/String;)V
+        72: iload         4
+        74: ireturn
+        75: astore        5
+        77: getstatic     #2                  // Field java/lang/System.out:Ljava/io/PrintStream;
+        80: ldc           #3                  // String xxxxxxxxxxx
+        82: invokevirtual #4                  // Method java/io/PrintStream.println:(Ljava/lang/String;)V
+        85: aload         5
+        87: athrow
+      Exception table:
+         from    to  target type
+             0     7    18   Class java/lang/NullPointerException
+             0     7    37   Class java/lang/ArithmeticException
+             0     7    56   Class java/lang/Exception
+             0     7    75   any
+            18    26    75   any
+            37    45    75   any
+            56    64    75   any
+            75    77    75   any
+      LineNumberTable:
+        line 6: 0
+        line 7: 4
+        line 18: 7
+        line 7: 15
+        line 8: 18
+        line 9: 19
+        line 10: 23
+        line 18: 26
+        line 10: 34
+        line 11: 37
+        line 12: 38
+        line 13: 42
+        line 18: 45
+        line 13: 53
+        line 14: 56
+        line 15: 57
+        line 16: 61
+        line 18: 64
+        line 16: 72
+        line 18: 75
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            4      14     3 result   I
+           19      18     3     e   Ljava/lang/NullPointerException;
+           38      18     3     e   Ljava/lang/ArithmeticException;
+           57      18     3     e   Ljava/lang/Exception;
+            0      88     0  this   LDemo;
+            0      88     1     a   I
+            0      88     2     b   I
+      StackMapTable: number_of_entries = 4
+        frame_type = 82 /* same_locals_1_stack_item */
+          stack = [ class java/lang/NullPointerException ]
+        frame_type = 82 /* same_locals_1_stack_item */
+          stack = [ class java/lang/ArithmeticException ]
+        frame_type = 82 /* same_locals_1_stack_item */
+          stack = [ class java/lang/Exception ]
+        frame_type = 82 /* same_locals_1_stack_item */
+          stack = [ class java/lang/Throwable ]
+}
+SourceFile: "Demo.java"
