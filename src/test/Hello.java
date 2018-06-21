@@ -7,18 +7,32 @@ import java.util.Random;
 public class Hello {
 	
 	public static void main(String[] args) {
-		for(int i=1;i<=100;i++){
-			Integer[] arr=new Integer[]{1,2,3,4,5,6,7,8,9,10};
-			shuffer(arr);
-			printArr(arr);
-			HashMap<String, Integer> map = getLargestAndSecondLargestNumber(arr);
-			System.out.println("******************test "+i+"*****************");
-			System.out.println("最大元素："+map.get("largestNumber"));
-			System.out.println("第二大元素："+map.get("secondLargestNumber"));
-			System.out.println();
-		}
+		
+		String[] arr=new String[]{"xabcefg","sabceexxxfuck","abce","abce","abcexxx"};
+		System.out.println(getLongestPrefix(arr));
 	}
 	
+	
+	public static String getLongestPrefix(String[] arr){
+		String str1=arr[0];
+		String longestPrefix = null;
+		for(int i=1;i<str1.length()+1;i++){
+			longestPrefix=str1.substring(0, i);
+			boolean isOk=true;
+			for(int j=1;j<arr.length;j++){
+				String currStr=arr[j];
+				if(!currStr.startsWith(longestPrefix)){
+					isOk=false;
+					break;
+				}
+			}
+			if(!isOk){
+				longestPrefix=longestPrefix.substring(0,longestPrefix.length()-1);
+				break;
+			}
+		}
+		return longestPrefix;
+	}
 	public static Integer[] getShuffer(Integer[] arr){
 			Random r = new Random();
 			Integer[] newArr=new Integer[arr.length];
