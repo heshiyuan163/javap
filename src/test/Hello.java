@@ -7,9 +7,107 @@ import java.util.Random;
 public class Hello {
 	
 	public static void main(String[] args) {
+		int length=100000;
+		for(int i=1;i<=20;i++){
+			Integer[] arr=new Integer[length];
+			for(int j=0;j<length;j++){
+				arr[j]=j+1;
+			}
+			shuffer(arr);
+			quickSort(arr);
+			
+			arr=new Integer[length];
+			for(int j=0;j<length;j++){
+				arr[j]=j+1;
+			}
+			shuffer(arr);
+			//bubbleSort(arr);
+			myBubbleSort(arr);
+		}
+	}
+	
+	
+	
+	public static void myBubbleSort(Integer[] arr){
+		long t1 = System.currentTimeMillis();
+		int length=arr.length;
+		for(int i=0;i<=length-1;i++){
+			int currMaxIndex=0;
+			for(int j=1;j<=length-i-1;j++){
+				if(arr[j]>arr[currMaxIndex]){
+					currMaxIndex=j;
+				}
+			}
+			int temp=arr[length-i-1];
+			arr[length-i-1]=arr[currMaxIndex];
+			arr[currMaxIndex]=temp;
+		}
+		System.out.println("我的冒泡排序耗时："+(System.currentTimeMillis()-t1)+"毫秒！");
+	}
+	
+	public static void quickSort(Integer[] arr){
+		long t1 = System.currentTimeMillis();
+		quickSort2(arr, 0, arr.length-1);
+		System.out.println("快速排序耗时："+(System.currentTimeMillis()-t1)+"毫秒！");
+	}
+	
+	public static void bubbleSort(Integer[] arr){
+			int length=arr.length;
+			long t1 = System.currentTimeMillis();
+			for(int i = 0;i < length-1;i++){
+				    for(int j = 0;j < length - 1 - i;j++){
+				        if(arr [j] > arr[j + 1]){
+				            int temp = arr[j];
+				            arr[j] = arr [j + 1];
+				            arr[j+1] = temp;
+				        }
+				    }
+			}
+			System.out.println("冒泡排序耗时："+(System.currentTimeMillis()-t1)+"毫秒！");
+	}
+	
+	
+	private static void quickSort2(Integer[] arr,int fromIndex,int toIndex){
+		if(fromIndex>=toIndex){
+			return;
+		}
 		
-		String[] arr=new String[]{"xabcefg","sabceexxxfuck","abce","abce","abcexxx"};
-		System.out.println(getLongestPrefix(arr));
+		//	200		100		10		5       40		50     		3      900      30      60		
+		//	0		1  		2  		3  		4  		[5]  		6  		7 		8 		9  
+		//	0																	length-1
+		
+		//0 1 2 3 4 5 6
+		
+		int middleNum=arr[fromIndex];//50
+		int num_smaller=0;//定义为小于等于标出数的数字的个数
+		for(int i=fromIndex;i<=toIndex;i++){
+			if(arr[i]<=middleNum){
+				num_smaller++;
+			}
+		}
+		//middleNum    			middleNum[最后在赋值]
+		//fromIndex  ...  fromIndex+num_smaller-1 	... toIdex
+		//则middleNum最终的角标就是fromIndex+num_smaller-1
+		//交换fromIndex和fromIndex+num_smaller-1角标处的元素
+		arr[fromIndex]=arr[fromIndex+num_smaller-1];
+		arr[fromIndex+num_smaller-1]=middleNum;
+		
+		int offset=0;
+		for(int i=fromIndex;i<(fromIndex+num_smaller-1);i++){
+			if(arr[i]>middleNum){
+				for(int j=fromIndex+num_smaller+offset;j<=toIndex;j++){
+					offset++;
+					if(arr[j]<=middleNum){
+						int temp=arr[i];
+						arr[i]=arr[j];
+						arr[j]=temp;
+						break;
+					}
+				}
+			}
+		}
+		quickSort2(arr, fromIndex, fromIndex+num_smaller-2);
+		quickSort2(arr, fromIndex+num_smaller, toIndex);
 	}
 	
 	
